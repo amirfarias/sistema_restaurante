@@ -1,14 +1,13 @@
 package com.restaurante;
 
 public class Mesa {
-
     private int numero;
     private boolean ocupada;
     private Pedido pedidoAtual;
 
     public Mesa(int numero) {
         this.numero = numero;
-        this.ocupada = false; 
+        this.ocupada = false;
         this.pedidoAtual = null;
     }
 
@@ -26,6 +25,7 @@ public class Mesa {
 
     public void liberar() {
         this.ocupada = false;
+        this.pedidoAtual = null;
     }
 
     public Pedido getPedidoAtual() {
@@ -35,5 +35,4 @@ public class Mesa {
     public void setPedidoAtual(Pedido pedidoAtual) {
         this.pedidoAtual = pedidoAtual;
     }
-
 }

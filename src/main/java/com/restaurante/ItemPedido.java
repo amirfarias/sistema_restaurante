@@ -1,5 +1,5 @@
-package com.restaurante;
 
+package com.restaurante;
 public class ItemPedido {
     private int quantidade;
     private Prato prato;
@@ -24,10 +24,11 @@ public class ItemPedido {
     public void setPrato(Prato prato) {
         this.prato = prato;
     }
-    
+
     public double calcularSubTotal() {
-        double total = 0;
-        total = this.quantidade * prato.getPreco();
-        return total;
+        if (this.prato == null) {
+            return 0.0;
+        }
+        return this.quantidade * this.prato.getPreco();
     }
 }

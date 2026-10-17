@@ -4,11 +4,13 @@ public class Prato {
     private String nome;
     private double preco;
     private boolean disponivel;
-    
+    private int quantidadePedida;
+
     public Prato(String nome, double preco, boolean disponivel) {
         this.nome = nome;
         this.preco = preco;
         this.disponivel = disponivel;
+        this.quantidadePedida = 0;
     }
 
     public String getNome() {
@@ -33,5 +35,13 @@ public class Prato {
 
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public int getQuantidadePedida() {
+        return quantidadePedida;
+    }
+
+    public void adicionarQuantidadePedida(int qtd) {
+        this.quantidadePedida += qtd;
     }
 }
